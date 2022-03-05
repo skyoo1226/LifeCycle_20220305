@@ -14,6 +14,21 @@ class MainActivity : AppCompatActivity() {
         setValues()
     }
 
+    override fun onResume() {
+        super.onResume()
+        Log.d("메인","onResume 실행됨")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("메인화면","onPause 실행됨")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("메인화면","onDestroy 실행됨")
+    }
+
         fun setupEvents()  {
 
             btnMove.setOnClickListener {
